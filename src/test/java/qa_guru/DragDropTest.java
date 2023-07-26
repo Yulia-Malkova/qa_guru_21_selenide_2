@@ -19,7 +19,7 @@ public class DragDropTest {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         SelenideElement sourceElement = $("#column-a");
         SelenideElement targetElement = $("#column-b");
-        (sourceElement).dragAndDropTo(targetElement);
+        sourceElement.dragAndDropTo(targetElement);
         targetElement.shouldHave(text("A"));
         sourceElement.shouldHave(text("B"));
     }

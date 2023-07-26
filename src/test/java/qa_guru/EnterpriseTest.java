@@ -15,7 +15,7 @@ public class EnterpriseTest {
     @Test
     void enterprisePageOpensFromSolutions() {
     open("https://github.com/");
-    $(byText("Solutions")).hover();
+    $(".header-menu-wrapper").$(byText("Solutions")).hover();
     $(byText("Enterprise")).click();
     $(".application-main .h1-mktg").shouldHave(text("Build like the best"));
     }
